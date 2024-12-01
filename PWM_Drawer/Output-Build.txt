@@ -1,0 +1,34 @@
+﻿------ Build started: Project: PWM_Drawer, Configuration: Debug AVR ------
+Build started.
+Project "PWM_Drawer.cproj" (default targets):
+Target "PreBuildEvent" skipped, due to false condition; ('$(PreBuildEvent)'!='') was evaluated as (''!='').
+Target "CoreBuild" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Compiler.targets" from project "C:\Users\abdollah\Desktop\Trash\PWM_Drawer\PWM_Drawer\PWM_Drawer.cproj" (target "Build" depends on it):
+	Task "RunCompilerTask"
+		Shell Utils Path C:\Program Files (x86)\Atmel\Studio\7.0\shellUtils
+		C:\Program Files (x86)\Atmel\Studio\7.0\shellUtils\make.exe all --jobs 12 --output-sync 
+		Building file: ../APP/App.c
+		Invoking: XC8 C Compiler : 2.36
+		"C:\Program Files\Microchip\xc8\v2.36\bin\xc8-cc.exe"  -mcpu=ATmega32A  -c -x c -funsigned-char -funsigned-bitfields -mext=cci -D__ATmega32A__ -DDEBUG  -I"../Util" -I"../MCAL/DIO" -I"../HAL/LCD/config" -I"../HAL/LCD/static" -I"../MCAL/GPT/config" -I"../MCAL/GPT/static" -I"../MCAL/PWM/static" -I"../MCAL/PWM/config" -I"../MCAL/ICU/config" -I"../MCAL/ICU/static" -I"../HAL/GLCD/config" -I"../HAL/GLCD/static" -I"../MCAL/TMR1" -I"../MCAL/GI" -I"../MCAL/EXTI" -I"../APP" -I"../MCAL" -I"../MCAL/TMR0"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -MD -MP -MF "APP/App.d" -MT"APP/App.d" -MT"APP/App.o"   -o "APP/App.o" "../APP/App.c" 
+		Finished building: ../APP/App.c
+		Building target: PWM_Drawer.elf
+		Invoking:  XC8 C Linker : 2.36
+		"C:\Program Files\Microchip\xc8\v2.36\bin\xc8-cc.exe" -o PWM_Drawer.elf  APP/App.o HAL/GLCD/GLCD.o main.o MCAL/DIO/DIO.o MCAL/EXTI/EXTI_program.o MCAL/GI/GI_program.o MCAL/TMR0/TMR0_program.o MCAL/TMR1/TMR1_program.o   -mcpu=ATmega32A  -Wl,-Map="PWM_Drawer.map" -funsigned-char -funsigned-bitfields -Wl,--start-group -Wl,-lm  -Wl,--end-group -Wl,--gc-sections -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums --memorysummary,memoryfile.xml  
+		Info: Loading file: c:\program files\microchip\xc8\v2.36\avr\avr\bin\../lib\ldscripts/avr5.xn
+		Finished building target: PWM_Drawer.elf
+		"C:\Program Files\Microchip\xc8\v2.36\bin\avr-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures  "PWM_Drawer.elf" "PWM_Drawer.hex"
+		"C:\Program Files\Microchip\xc8\v2.36\bin\avr-objcopy.exe" -j .eeprom --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0 --no-change-warnings -O ihex "PWM_Drawer.elf" "PWM_Drawer.eep" || exit 0
+		"C:\Program Files\Microchip\xc8\v2.36\bin\avr-objdump.exe" -h -S "PWM_Drawer.elf" > "PWM_Drawer.lss"
+	Done executing task "RunCompilerTask".
+	Task "RunOutputFileVerifyTask"
+				Program Memory Usage 	:	12189 bytes   37.2 % Full
+				Data Memory Usage 		:	48 bytes   2.3 % Full
+				Warning: Memory Usage estimation may not be accurate if there are sections other than .text sections in ELF file
+	Done executing task "RunOutputFileVerifyTask".
+Done building target "CoreBuild" in project "PWM_Drawer.cproj".
+Target "PostBuildEvent" skipped, due to false condition; ('$(PostBuildEvent)' != '') was evaluated as ('' != '').
+Target "Build" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Avr.common.targets" from project "C:\Users\abdollah\Desktop\Trash\PWM_Drawer\PWM_Drawer\PWM_Drawer.cproj" (entry point):
+Done building target "Build" in project "PWM_Drawer.cproj".
+Done building project "PWM_Drawer.cproj".
+
+Build succeeded.
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
